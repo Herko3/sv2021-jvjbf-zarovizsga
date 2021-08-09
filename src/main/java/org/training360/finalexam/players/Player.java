@@ -3,6 +3,7 @@ package org.training360.finalexam.players;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.training360.finalexam.teams.Team;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -24,6 +25,10 @@ public class Player {
 
     @Enumerated(value = EnumType.STRING)
     private PositionType position;
+
+    @ManyToOne
+    @JoinColumn(name = "team_id")
+    private Team team;
 
     public Player(String name, LocalDate birthDate, PositionType position) {
         this.name = name;
