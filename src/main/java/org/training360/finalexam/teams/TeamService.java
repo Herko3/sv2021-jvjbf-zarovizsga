@@ -59,10 +59,9 @@ public class TeamService {
     }
 
     private boolean canBeSigned(Team team, Player player) {
-        int playersOnPost = team.getPlayers().stream()
+        long playersOnPost = team.getPlayers().stream()
                 .filter(p -> p.getPosition() == player.getPosition())
-                .toList()
-                .size();
+                .count();
 
         return player.getTeam() == null && playersOnPost < 2;
     }
