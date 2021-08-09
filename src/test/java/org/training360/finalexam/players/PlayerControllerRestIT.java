@@ -8,7 +8,6 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.test.context.jdbc.Sql;
-import org.training360.finalexam.teams.CreateTeamCommand;
 import org.zalando.problem.Problem;
 import org.zalando.problem.Status;
 
